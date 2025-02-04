@@ -6,4 +6,7 @@
     <string name="get_started">Get Started</string>
     <string name="passengers">Passengers</string>
     <string name="search_flights">Search Flights</string>
+    <string name="from">from</string>
+    <string name="to">to</string>
+    <string name="toShort">to</string>
 </resources>
