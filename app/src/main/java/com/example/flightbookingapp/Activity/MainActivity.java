@@ -41,7 +41,7 @@ public class MainActivity extends BaseActivity {
         initClassSeat();
         initDatePickup();
         setVariable();
-
+//test push
     }
 
     private void setVariable() {
