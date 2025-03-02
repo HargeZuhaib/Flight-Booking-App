@@ -39,13 +39,16 @@
 
         <TextView
             android:id="@+id/textView6"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="Search Result"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
+            android:textAlignment="center"
+            android:paddingTop="55dp"
+            android:paddingRight="130dp"
 
             app:layout_constraintBottom_toBottomOf="@+id/imageView10"
             app:layout_constraintStart_toEndOf="@+id/imageView10"
@@ -56,6 +59,7 @@
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />

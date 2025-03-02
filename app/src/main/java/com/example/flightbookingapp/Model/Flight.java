@@ -93,7 +93,7 @@ public class Flight implements Serializable {
     }
 
     public Double getPrice() {
-        return price;
+        return price*86;
     }
 
     public void setPrice(Double price) {
