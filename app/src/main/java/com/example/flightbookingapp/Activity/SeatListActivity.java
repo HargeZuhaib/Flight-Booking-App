@@ -1,7 +1,9 @@
 package com.example.flightbookingapp.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,6 +45,23 @@ public class SeatListActivity extends BaseActivity {
 
     private void setVariable() {
         binding.backBtn.setOnClickListener(v -> finish());
+
+        binding.confirmBtn.setOnClickListener(view -> {
+
+            if(num>0)
+            {
+                flight.setPassenger(binding.nameSeatSelectedTxt.getText().toString());
+                flight.setPrice(price);
+                Intent intent =new Intent(SeatListActivity.this,TicketDetailActivity.class);
+                intent.putExtra("flight",flight);
+                startActivity(intent);
+            }
+            else
+            {
+                Toast.makeText(SeatListActivity.this, "Please select your seat", Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     private void initSeatList() {
