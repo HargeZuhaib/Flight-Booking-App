@@ -8,6 +8,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.bumptech.glide.Glide;
 import com.example.flightbookingapp.Model.Flight;
 import com.example.flightbookingapp.R;
 import com.example.flightbookingapp.databinding.ActivityTicketDetailBinding;
@@ -31,7 +32,8 @@ public class TicketDetailActivity extends BaseActivity {
     private void setVariable() {
 
         binding.backBtn.setOnClickListener(v -> finish());
-        binding.fromTxt.setText(flight.getFromShort());
+        binding.fromTxt.setText(flight.getFrom());
+        binding.fromShortTxt.setText(flight.getFromShort());
         binding.fromSmallTxt.setText(flight.getFrom());
         binding.toTxt.setText(flight.getTo());
         binding.toShortTxt.setText(flight.getToShort());
@@ -39,9 +41,10 @@ public class TicketDetailActivity extends BaseActivity {
         binding.dateTxt.setText(flight.getDate());
         binding.arrivalTxt.setText(flight.getArriveTime());
         binding.classTxt.setText(flight.getClassSeat());
-        binding.priceTxt.setText("$"+flight.getPrice());
+        binding.priceTxt.setText("₹"+(flight.getPrice()/86));
         binding.airlines.setText(flight.getAirlineName());
         binding.seatsTxt.setText(flight.getPassenger());
+        binding.timeTxt.setText(flight.getTime());
 
     Glide.with(TicketDetailActivity.this)
 

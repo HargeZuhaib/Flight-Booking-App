@@ -64,11 +64,6 @@ public class SearchActivity extends BaseActivity {
                         }
 
 
-                        //To filter with date,uncomment below lines and comment top line
-                       /* if (flight.getTo().equals(to) && flight.getDate().equals(date)){
-                            list.add(flight);
-                        } */
-
                         if (!list.isEmpty()){
                             binding.searchView.setLayoutManager(new LinearLayoutManager(SearchActivity.this,LinearLayoutManager.VERTICAL,false));
                             binding.searchView.setAdapter(new FlightAdapter(list));
